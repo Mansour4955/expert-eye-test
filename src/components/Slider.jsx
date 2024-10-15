@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "../assets/r_006.jpg";
-import image2 from "../assets/553r-dark-green-muscle-car-1920x914.webp";
-import image3 from "../assets/sports-vs-supercars-cover-230920221250-420x230.jpg";
+import image1 from "../assets/X76124GL_303101393_059_DX_ENTRY.avif";
+import image2 from "../assets/r_006.jpg";
+import image3 from "../assets/553r-dark-green-muscle-car-1920x914.webp";
 import Typewriter from "react-typewriter-effect";
 
 const TextWriterSlider = () => {
@@ -61,7 +61,7 @@ const TextWriterSlider = () => {
   const images = [image1, image2, image3];
 
   return (
-    <div className="relative w-full mx-auto">
+    <div className="relative w-full overflow-x-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-5xl text-gray-200 font-bold">
         <Typewriter
           text="Welcome to the biggest cars market in the world!"

@@ -1,27 +1,13 @@
 import React from "react";
 import TextWriterSlider from "../components/Slider";
+import HomePageBelowSection from "../components/HomePageBelowSection";
 const HomePage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col">
       <TextWriterSlider />
+      <HomePageBelowSection />
     </div>
   );
 };
 
 export default HomePage;
-{
-  /* <table>
-<thead>
-  <tr>
-    <th>Brand</th>
-    <th>Model</th>
-    <th>Year</th>
-  </tr>
-</thead>
-</table> */
-}
-
-{
-  /* Welcome to the biggest cars market in the world! 
-here where you can find your dream car based on your price */
-}
