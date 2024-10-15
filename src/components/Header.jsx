@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center py-2 px-5 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]">
       <Link to="/" className="text-3xl font-semibold text-blue_color">
-        ExpertEye
+        CarsMarket
       </Link>
       <div className="flex items-center gap-x-5">
         {links?.map((link, index) => (
