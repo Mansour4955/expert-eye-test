@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import image from "../assets/553r-dark-green-muscle-car-1920x914.webp";
 
-const CardsContainer = ({cars}) => {
+const CardsContainer = ({filteredVehicles}) => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <div className="w-full grid grid-cols-4 gap-5">
-    {cars?.vehicles?.map((vehicle, index) => (
+    <div className="w-full grid max-md:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    {filteredVehicles?.map((vehicle, index) => (
       <div
         className="col-span-1 bg-grey_color flex flex-col rounded-xl duration-200 hover:shadow-[0px_0px_28px_20px_#00000024] cursor-pointer"
         key={index}

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Select from 'react-select';
+import React, { useState } from "react";
+import Select from "react-select";
 
 const MySelect = ({ options, placeholder, onChange }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleChange = (option) => {
     setSelectedOption(option);
-    onChange(option ? option.value : null); 
+    onChange(option ? option.value : null);
   };
 
   return (
@@ -17,11 +17,17 @@ const MySelect = ({ options, placeholder, onChange }) => {
         options={options}
         isClearable
         isSearchable
-        placeholder={placeholder} 
+        placeholder={placeholder}
+        styles={{
+          control: (provided) => ({
+            ...provided,
+            width: "300px",
+          }),
+        }}
       />
-      {selectedOption && (
+      {/* {selectedOption && (
         <p>You selected: {selectedOption.label}</p>
-      )}
+      )} */}
     </div>
   );
 };
