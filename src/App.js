@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <div className="min-h-[100vh] flex flex-col">
           <Header />
-          <div className="flex-1 mx-5 my-2">
+          <div className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="*" element={<NotFound />} />
