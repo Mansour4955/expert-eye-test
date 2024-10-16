@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# refers to the parent folder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## refers to a folder
 
-## Available Scripts
+### refers to a file
 
-In the project directory, you can run:
+# src
 
-### `npm start`
+## assets
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In this folder I have put the images that I needed in my project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## components
 
-### `npm test`
+In this folder I have put all components that are not considered as pages, to organise the components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### CarChart.jsx
 
-### `npm run build`
+This is a component of a chart, I created it to be reuseable,and I called it in CardPopup.jsx
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### CardPopup.jsx
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This component is a popup shows up when a user clicks on a card to show them details of the trends of a car-level in a table and a chart, and you can close it by clicking on the close icon "X".
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CardContainer.jsx
 
-### `npm run eject`
+This component is a container of cards,it takes a dynamic prop "filteredVehicles" that contains the cards based on the filter of the user, and shows the cards based on that filter, but if there is no card that matches the filter it shows this text "There is no car matched with your filter!".
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Footer.jsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Empty footer
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Header.jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This component contains a website logo in the left when a use clicks on it they would navigate to the home page, and links of the pages in the middle, and the section on the right when you click on it, it takes you to your profile.
 
-## Learn More
+### HomePageBelowSection.jsx
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In this component we have the filter logic "filter by brand","filter by model", "filter by year", so based on the filter of the user, we filter the cards and send only the cards that match the filter as a prop "filteredVehicles" to "CardsContainer" that shows that cards.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### MySelect.jsx
 
-### Code Splitting
+In this component we have a custom select "modern select that we can control and design like we want" it takes 3 props to be REUSEABLE "options","placeholder","onChange", and I called it 3 times in "HomePageBelowSection".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Slider.jsx
 
-### Analyzing the Bundle Size
+In this component we have a slider that shows images dynamically, with a text in a "TypeWritterEffect".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## data
 
-### Making a Progressive Web App
+### cars.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+in this file I have a data of cars that I found with the test
 
-### Advanced Configuration
+### headerLinks.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+in this file I have links for routing to be dynamic links
 
-### Deployment
+### yearsData.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+in this file I have a data of years for the filtering
 
-### `npm run build` fails to minify
+## pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### HomePage.js
+
+this is a page of home page that includes slider, and filtering and cards
+
+### NotFound.js
+
+this is the page that shows up to a user when they navigate to unexisting route (page), has a text of "page not found!" and a link to go back home page.
+
+###### files inside src directory
+
+### app.js
+
+In this component we handle the routing
+
+### index.css
+
+In this component we have 3 lines of code that are important for tailwind to work
+
+###### files outside src directory
+
+### README.md
+
+In this file we have the documentation of the project
+
+### tailwing.config.js
+
+In this file we have the configuration of TAILWIND and some colors to call them as they are the main colors in this project
